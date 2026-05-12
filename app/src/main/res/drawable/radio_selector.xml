@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Cor quando o RadioButton ESTÁ selecionado -->
-    <item android:state_checked="true" android:color="#4988C4" />
-
-    <!-- Cor quando o RadioButton NÃO ESTÁ selecionado -->
-    <item android:state_checked="false" android:color="#0F2854" />
-</shape>

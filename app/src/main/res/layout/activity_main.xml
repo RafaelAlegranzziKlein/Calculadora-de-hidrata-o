@@ -3,9 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    style="te"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BDE8F5"
+    android:foregroundTint="#4D3B3B"
     tools:context=".MainActivity">
 
     <TextView
@@ -18,7 +20,9 @@
         android:fontFamily="@font/amiri_quran"
         android:text="💧HydroGoal💧"
         android:textAlignment="center"
+        android:textColor="#000"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +39,8 @@
         android:hint="Idade (Anos):"
         android:inputType="number"
         android:textAlignment="viewStart"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtPeso" />
@@ -51,6 +57,8 @@
         android:hint="Peso (Kg):"
         android:inputType="numberDecimal"
         android:textAlignment="viewStart"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +73,7 @@
     </com.google.android.material.chip.ChipGroup>
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rgBotao"
         android:layout_width="257dp"
         android:layout_height="45dp"
         android:layout_marginStart="24dp"
@@ -75,34 +83,46 @@
         android:checkedButton="@id/rbtSedentario"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtIdade">
 
 
         <RadioButton
             android:id="@+id/rbtSedentario"
+            style="te"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:buttonTint="@drawable/radio_selector"
+            android:foregroundTint="#050505"
             android:text="Sedentário"
-            android:textSize="12sp" />
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rbtModerado"
+            style="te"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:buttonTint="@drawable/radio_selector"
+            android:foregroundTint="#050505"
             android:text="Moderado"
-            android:textSize="12sp" />
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/rbtIntenso"
+            style="te"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content"
-            android:buttonTint="@drawable/radio_selector"
+            android:foregroundTint="#050505"
             android:text="Intenso"
-            android:textSize="12sp" />
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
     </RadioGroup>
 
@@ -118,9 +138,11 @@
         android:hint="Água Consumida Hoje(ml):"
         android:inputType="number"
         android:textAlignment="viewStart"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/rgBotao" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -134,9 +156,7 @@
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtAguaCon"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/edtAguaCon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
